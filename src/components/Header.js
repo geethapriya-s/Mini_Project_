@@ -5,6 +5,7 @@ import Home from './home.js';
 import Register from './register.js';
 import Profile from './profile.js';
 import Key from './key.js';
+import Widget from './Widget.js';
 import {BrowserRouter,Route,Link} from 'react-router-dom';
 class Header extends Component{
   state={
@@ -33,7 +34,7 @@ class Header extends Component{
         },
         {
           name:"Widgets",
-          link:"/register",
+          link:"/widget",
           class:"dis"
         },
         {
@@ -88,6 +89,7 @@ class Header extends Component{
             <Route exact path="/register" render={(props)=><Register {...props}  start={this.start} email={this.state.email}/>}/>
             <Route exact path="/profile" component={Profile}/>
             <Route exact path="/key" component={Key}/>
+            <Route exact path="/widget" component={Widget}/>
             </BrowserRouter>
           </nav>
       </header>
